@@ -1,6 +1,6 @@
 var express = require('express');
 var mongoose = require('mongoose');
-var stormpath = require('stormpath');
+var stormpath = require('express-stormpath');
 
 var helpers = require('./helpers');
 //var publicRoutes = require('./routes/public');
