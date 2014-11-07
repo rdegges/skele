@@ -1,4 +1,9 @@
+var mongoose = require('mongoose');
+var stormpath = require('express-stormpath');
+
+
 var DEFAULT_MONGO_URL = 'mongodb://localhost/skele';
+
 
 /**
  * Initialize an Express application.
