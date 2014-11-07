@@ -1,0 +1,28 @@
+{
+  "name": "skele",
+  "version": "1.0.0",
+  "description": "A simple, modern, Express 4.x skeleton.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rdegges/skele.git"
+  },
+  "keywords": [
+    "skeleton",
+    "express"
+  ],
+  "author": "Randall Degges",
+  "license": "UNLICNSE",
+  "bugs": {
+    "url": "https://github.com/rdegges/skele/issues"
+  },
+  "homepage": "https://github.com/rdegges/skele",
+  "dependencies": {
+    "express": "^4.10.1",
+    "express-stormpath": "^0.5.2",
+    "mongoose": "^3.8.18"
+  }
+}
