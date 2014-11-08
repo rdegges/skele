@@ -1,13 +1,13 @@
 var express = require('express');
 var stormpath = require('express-stormpath');
 
-var helpers = require('./helpers');
+//var helpers = require('./helpers');
 //var publicRoutes = require('./routes/public');
 //var dashboardRoutes = require('./routes/dashboard');
 
 
 // Initialize our MongoDB connection.
-helpers.connectDB(process.env.MONGOHQ_URL)
+//helpers.connectDB(process.env.MONGOHQ_URL)
 
 // Initialize routes.
 //var router = express.Router();
