@@ -14,15 +14,13 @@ var DEFAULT_MONGO_URL = 'mongodb://localhost/skele';
 module.exports.createApp = function() {
   var app = express();
 
-  console.log('apiKeyId', process.env.STORMPATH_API_KEY_ID);
-  console.log('apiKeySecret', process.env.STORMPATH_API_KEY_SECRET);
-  console.log('application', process.env.STORMPATH_URL);
-
   app.use(stormpath.init(app, {
     apiKeyId:     process.env.STORMPATH_API_KEY_ID,
     apiKeySecret: process.env.STORMPATH_API_KEY_SECRET,
     application:  process.env.STORMPATH_URL,
   }));
+
+  return app;
 };
 
 /**
