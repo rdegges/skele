@@ -1,3 +1,4 @@
+var express = require('express');
 var mongoose = require('mongoose');
 var stormpath = require('express-stormpath');
 
