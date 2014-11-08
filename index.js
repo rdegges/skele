@@ -13,6 +13,6 @@ helpers.connectDB(process.env.MONGOHQ_URL)
 
 // Start our server.
 var app = helpers.createApp();
-console.log(app);
+console.log('DEBUG:', app);
 //app.use(routes);
 app.listen(process.env.PORT || 3000);
