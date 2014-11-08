@@ -11,8 +11,16 @@ helpers.connectDB(process.env.MONGOHQ_URL)
 //router.use('/', publicRoutes);
 //router.use('/dashboard', dashboardRoutes);
 
-// Start our server.
-var app = helpers.createApp();
-console.log('DEBUG:', app);
+var app = express();
+
+// Initialize Stormpath for authentication.
+app.use(stormpath.init(app, {
+  apiKeyId:     process.env.STORMPATH_API_KEY_ID,
+  apiKeySecret: process.env.STORMPATH_API_KEY_SECRET,
+  application:  process.env.STORMPATH_URL,
+}));
+
 //app.use(routes);
+
+// Start our server.
 app.listen(process.env.PORT || 3000);
