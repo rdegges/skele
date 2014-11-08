@@ -20,6 +20,8 @@ module.exports.createApp = function() {
     application:  process.env.STORMPATH_URL,
   }));
 
+  console.log('crap:', app);
+
   return app;
 };
 
