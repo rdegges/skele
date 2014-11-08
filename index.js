@@ -1,5 +1,5 @@
 var express = require('express');
-var stormpath = require('express-stormapth');
+var stormpath = require('express-stormpath');
 
 var helpers = require('./helpers');
 //var publicRoutes = require('./routes/public');
