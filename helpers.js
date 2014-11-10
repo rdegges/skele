@@ -10,6 +10,20 @@ var DEFAULT_MONGO_URL = 'mongodb://localhost/skele';
  * @return {Object} - An Express application.
  */
 module.exports.createApp = function() {
+  var app = express();
+
+  // Enable case sensitive routing.
+  app.set('case sensitive', true);
+
+  // Enable strict routing.
+  app.set('strict routing', true);
+
+  // Use Jade for rendering templates.
+  app.set('view engine', 'jade');
+
+  // Use a cool x-powered-by header >:D
+  app.set('x-powered-by', 'skele/1.0.0');
+
   return express();
 };
 
