@@ -10,7 +10,7 @@ var stormpath = require('express-stormpath');
 //helpers.connectDB(process.env.MONGOHQ_URL)
 
 // Initialize routes.
-//var router = express.Router();
+var router = express.Router();
 //router.use('/', publicRoutes);
 //router.use('/dashboard', dashboardRoutes);
 
@@ -22,7 +22,7 @@ app.use(stormpath.init(app, {
   secretKey:    process.env.STORMPATH_SECRET_KEY,
 }));
 
-//app.use(routes);
+app.use('/', routes);
 
 // Start our server.
 app.listen(process.env.PORT || 3000);
