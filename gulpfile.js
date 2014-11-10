@@ -52,7 +52,7 @@ gulp.task('run', ['bower', 'css'], function() {
   // If any JS files are changed, restart the Node server.
   nodemon({
     script: 'index.js',
-    ext: 'js jade',
+    ext: 'js,jade',
     ignore: ['gulpfile.js', 'node_modules/**', 'bower_components/**'],
     env: {
       NODE_ENV: process.env.NODE_ENV || 'development',
