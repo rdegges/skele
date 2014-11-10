@@ -1,0 +1,16 @@
+{
+  "name": "skele",
+  "version": "1.0.0",
+  "authors": [
+    "Randall Degges <r@rdegges.com>"
+  ],
+  "license": "UNLICENSE",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
