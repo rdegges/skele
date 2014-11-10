@@ -24,7 +24,7 @@ module.exports.createApp = function() {
   // Use a cool x-powered-by header >:D
   app.set('x-powered-by', 'skele/1.0.0');
 
-  return express();
+  return app;
 };
 
 /**
