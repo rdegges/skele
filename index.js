@@ -1,7 +1,7 @@
 var express = require('express');
 var stormpath = require('express-stormpath');
 
-//var helpers = require('./helpers');
+var helpers = require('./helpers');
 //var publicRoutes = require('./routes/public');
 //var dashboardRoutes = require('./routes/dashboard');
 
@@ -14,13 +14,13 @@ var router = express.Router();
 //router.use('/', publicRoutes);
 //router.use('/dashboard', dashboardRoutes);
 
-var app = express();
+var app = helpers.createApp();
 
 // Initialize Stormpath for authentication.
-app.use(stormpath.init(app, {
-  application:  process.env.STORMPATH_URL,
-  secretKey:    process.env.STORMPATH_SECRET_KEY,
-}));
+//app.use(stormpath.init(app, {
+//  application:  process.env.STORMPATH_URL,
+//  secretKey:    process.env.STORMPATH_SECRET_KEY,
+//}));
 
 app.use('/', routes);
 
