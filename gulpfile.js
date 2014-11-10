@@ -28,7 +28,7 @@ gulp.task('cleanBower', function(cb) {
 /**
  * Copy all bower components into our asset path.
  */
-gulp.task('bower', function() {
+gulp.task('bower', ['cleanBower'], function() {
   bower()
     .pipe(gulp.dest('./assets/bower'));
 });
