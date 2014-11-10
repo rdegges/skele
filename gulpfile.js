@@ -22,8 +22,8 @@ gulp.task('css', function() {
 /**
  * Wipe out all old Bower files.
  */
-gulp.task('cleanBower', function(cb) {
-  del(['./assets/bower'], { force: true }, cb);
+gulp.task('cleanBower', function() {
+  del.sync(['./assets/bower'], { force: true });
 });
 
 /**
