@@ -14,14 +14,10 @@ var router = express.Router();
 //router.use('/', publicRoutes);
 //router.use('/dashboard', dashboardRoutes);
 
+// Initialize our Express application.
 var app = helpers.createApp();
 
-// Initialize Stormpath for authentication.
-//app.use(stormpath.init(app, {
-//  application:  process.env.STORMPATH_URL,
-//  secretKey:    process.env.STORMPATH_SECRET_KEY,
-//}));
-
+// Use our routes.
 app.use('/', router);
 
 // Start our server.
