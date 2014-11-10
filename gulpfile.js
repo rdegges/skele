@@ -16,3 +16,11 @@ gulp.task('css', function() {
     .pipe(stylus({ compress: !DEV_MODE }))
     .pipe(gulp.dest('./assets/css/'));
 });
+
+/**
+ * Copy all bower components into our asset path.
+ */
+gulp.task('bower', function() {
+  bower()
+    .pipe(gulp.dest('./assets/bower'));
+});
