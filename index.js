@@ -7,7 +7,7 @@ var helpers = require('./helpers');
 
 
 // Initialize our MongoDB connection.
-//helpers.connectDB(process.env.MONGOHQ_URL)
+helpers.connectDB(process.env.MONGOHQ_URL);
 
 // Initialize routes.
 var router = express.Router();
