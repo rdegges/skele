@@ -10,9 +10,7 @@ var DEFAULT_MONGO_URL = 'mongodb://localhost/skele';
  * @return {Object} - An Express application.
  */
 module.exports.createApp = function() {
-  var app = express();
-
-  return app;
+  return express();
 };
 
 /**
