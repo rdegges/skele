@@ -11,7 +11,7 @@ helpers.connectDB(process.env.MONGOHQ_URL);
 
 // Initialize routes.
 var router = express.Router();
-//router.use('/', publicRoutes);
+router.use('/', publicRoutes);
 //router.use('/dashboard', dashboardRoutes);
 
 // Initialize our Express application.
