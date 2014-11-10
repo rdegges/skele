@@ -22,7 +22,7 @@ var app = helpers.createApp();
 //  secretKey:    process.env.STORMPATH_SECRET_KEY,
 //}));
 
-app.use('/', routes);
+app.use('/', router);
 
 // Start our server.
 app.listen(process.env.PORT || 3000);
