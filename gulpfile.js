@@ -1,4 +1,5 @@
 var bower = require('gulp-bower');
+var del = require('del');
 var gulp = require('gulp');
 var liveReload = require('gulp-livereload');
 var stylus = require('gulp-stylus');
@@ -15,6 +16,13 @@ gulp.task('css', function() {
   gulp.src('./assets/css/*.styl')
     .pipe(stylus({ compress: !DEV_MODE }))
     .pipe(gulp.dest('./assets/css/'));
+});
+
+/**
+ * Wipe out all old Bower files.
+ */
+gulp.task('cleanBower', function(cb) {
+  del(['./assets/bower'], { force: true }, cb);
 });
 
 /**
