@@ -5,7 +5,6 @@ var stylus = require('gulp-stylus');
 
 var NODE_ENV = process.env.NODE_ENV || 'development';
 var DEV_MODE = NODE_ENV === 'development';
-console.log('DEV_MODE', DEV_MODE);
 
 /**
  * Compile all of our Stylus CSS templates into proper CSS files.
