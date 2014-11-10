@@ -49,10 +49,13 @@ gulp.task('run', ['bower', 'css'], function() {
   // If any stylus files are changed, recompile the CSS.
   gulp.watch('./assets/css/*.styl', ['css']).on('change', liveReload.changed);
 
+  // If any Jade templates change, reload the live server.
+  gulp.watch('./views/*.jade').on('change', liveReload.changed);
+
   // If any JS files are changed, restart the Node server.
   nodemon({
     script: 'index.js',
-    ext: 'js,jade',
+    ext: 'js',
     ignore: ['gulpfile.js', 'node_modules/**', 'bower_components/**'],
     env: {
       NODE_ENV: process.env.NODE_ENV || 'development',
