@@ -24,6 +24,11 @@ module.exports.createApp = function() {
   // Disable powered by express header (for security).
   app.set('x-powered-by', false);
 
+  // In development mode, output pretty HTML.
+  if (app.get('env') === 'development') {
+    app.locals.pretty = true;
+  }
+
   return app;
 };
 
