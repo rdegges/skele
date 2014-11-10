@@ -17,6 +17,9 @@ router.use('/', publicRoutes);
 // Initialize our Express application.
 var app = helpers.createApp();
 
+// Initialize our middleware.
+helpers.initMiddleware(app);
+
 // Use our routes.
 app.use('/', router);
 

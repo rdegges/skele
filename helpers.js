@@ -12,12 +12,19 @@ var DEFAULT_MONGO_URL = 'mongodb://localhost/skele';
 module.exports.createApp = function() {
   var app = express();
 
+  return app;
+};
+
+/**
+ * Initialize all middleware on an Express application.
+ *
+ * @param {Object} app - An Express application.
+ */
+module.exports.initMiddleware = function(app) {
   app.use(stormpath.init(app, {
     application:    process.env.STORMPATH_URL,
     secretKey:      process.env.STORMPATH_SECRET_KEY,
   }));
-
-  return app;
 };
 
 /**
