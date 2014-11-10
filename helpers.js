@@ -21,8 +21,8 @@ module.exports.createApp = function() {
   // Use Jade for rendering templates.
   app.set('view engine', 'jade');
 
-  // Use a cool x-powered-by header >:D
-  app.set('x-powered-by', 'skele/1.0.0');
+  // Disable powered by express header (for security).
+  app.set('x-powered-by', false);
 
   return app;
 };
