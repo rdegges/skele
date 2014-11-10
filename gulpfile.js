@@ -3,8 +3,7 @@ var gulp = require('gulp');
 var liveReload = require('gulp-livereload');
 var stylus = require('gulp-stylus');
 
-var NODE_ENV = process.env.NODE_ENV || 'development';
-var DEV_MODE = NODE_ENV === 'development';
+var DEV_MODE = (process.env.NODE_ENV || 'development') === 'development';
 
 /**
  * Compile all of our Stylus CSS templates into proper CSS files.
