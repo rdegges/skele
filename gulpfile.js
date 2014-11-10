@@ -66,3 +66,8 @@ gulp.task('run', ['bower', 'css'], function() {
       console.log('Restarted!');
     });
 });
+
+/**
+ * Default task.
+ */
+gulp.task('default', ['run']);
