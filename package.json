@@ -29,5 +29,8 @@
     "express-stormpath": "^0.5.2",
     "jade": "^1.7.0",
     "mongoose": "^3.8.18"
+  },
+  "devDependencies": {
+    "gulp": "^3.8.10"
   }
 }
