@@ -7,5 +7,20 @@ html(lang='en')
     meta(http-equiv='X-UA-Compatible', content='IE=edge')
     meta(name='viewport', content='width=device-width, initial-scale=1')
     title #{title}
+    link(href='/assets/bower/bootswatch/paper/bootstrap.min.css', rel='stylesheet', type='text/css')
+    link(href='/assets/css/style.css', rel='stylesheet', type='text/css')
+    link(href='http://fonts.googleapis.com/css?family=Ubuntu', rel='stylesheet' type='text/css')
+    link(href='http://fonts.googleapis.com/css?family=Droid+Serif', rel='stylesheet' type='text/css')
+    <!--[if lt IE 9]>
+    script(src='/assets/bower/html5shiv/dist/html5shiv.min.js')
+    script(src='/assets/bower/respond/dest/respond.min.js')
+    <![endif]-->
+    script(src='/assets/bower/jquery/dist/jquery.min.js')
   body
-    #{body}
+    .container
+      header
+        .index-icon
+          img.img-responsive.img-circle(src='/assets/images/skely.jpg', alt='skely logo')
+        h1 skely
+      block body
+    script(src='/assets/bower/bootstrap/dist/js/bootstrap.min.js')
