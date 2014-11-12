@@ -1,2 +1,103 @@
-p.
-  hi
+extends base
+
+block body
+  script(type='text/javascript').
+    $(document).ready(function() {
+      $.ajax({
+        url: 'http://api.randomuser.me/?results=' + $('img.testimonial').length,
+        dataType: 'json',
+        success: function(data) {
+          $('img.testimonial').each(function(i) {
+            $(this).attr('src', data.results[i].user.picture.medium);
+          });
+
+          $('blockquote.testimonial').each(function(i) {
+            $(this).find('footer').html(data.results[i].user.name.first + ' ' + data.results[i].user.name.last);
+          });
+        }
+      });
+    });
+  .index
+    .index-welcome
+      p.
+        <span>skely</span> is a skeleton project that makes building Express-based
+        web applications simple, fast, and fun.  It's the bones that power your
+        website.
+
+      a(href='/register')
+        button.btn.btn-lg.btn-default.register-button Register
+      a(href='/login')
+        button.btn.btn-lg.btn-default.login-button Log In
+    hr
+    h2 Features
+    .row
+      .col-xs-4
+        img.img-responsive.img-circle(src='/assets/images/heart.png', alt='heart', height='100px', width='100px')
+        h3.feature Simple
+        p.feature-text.
+          Good luck trying to find something simpler! <span>skely</span>
+          is simple. Really simple.
+      .col-xs-4
+        img.img-responsive.img-circle(src='/assets/images/lightning.png', alt='lightning', height='100px', width='100px')
+        h3.feature Fast
+        p.feature-text.
+          Sites built with <span>skely</span> are fast by <i>default</i>. Try
+          finding something faster!
+      .col-xs-4
+        img.img-responsive.img-circle(src='/assets/images/fist.png', alt='fist', height='100px', width='100px')
+        h3.feature Glorious
+        p.feature-text.
+          Need I elaborate?  <span>skely</span> sites are a beauty to behold.
+    hr
+    h2 Testimonials
+    .row
+      .col-xs-4
+        img.img-responsive.img-circle.testimonial(src='', alt='skely logo', height='100px', width='100px')
+        blockquote.testimonial <span>skely</span> will change the world, and all the people who live in it.
+          footer
+      .col-xs-4
+        img.img-responsive.img-circle.testimonial(src='', alt='skely logo', height='100px', width='100px')
+        blockquote.testimonial <span>skely</span> is the best piece of software ever written. Period.
+          footer
+      .col-xs-4
+        img.img-responsive.img-circle.testimonial(src='', alt='skely logo', height='100px', width='100px')
+        blockquote.testimonial <span>skely</span> is the best thing that ever happened in my life.
+          footer
+    hr
+    h2 Pricing
+    .row.pricing
+      .col-xs-4
+        p.plan-cost free
+        h3.plan-name Testing
+        p.plan-tagline *For personal usage, and experimentation!
+        ul
+          li 10 Email Alerts Per Day
+          li 0 Phone Alerts Per Day
+          li 0 SMS Alerts Per Day
+      .col-xs-4
+        p.plan-cost $29.99
+        h3.plan-name Premium
+        p.plan-tagline *For small companies and freelancers.
+        ul
+          li 1000 Email Alerts Per Day
+          li 1000 Phone Alerts Per Day
+          li 1000 SMS Alerts Per Day
+      .col-xs-4
+        p.plan-cost $49.99
+        h3.plan-name Enterprise
+        p.plan-tagline *For large companies and big enterprises. No limits.
+        ul
+          li &infin; Email Alerts Per Day
+          li &infin; Phone Alerts Per Day
+          li &infin; SMS Alerts Per Day
+    hr
+    h2 Ready to Begin?
+    .row
+      .col-xs-12.get-started-box
+        p.
+          Don't wait -- get started right now. We'd love to help make you more
+          successful!  And we can't do that unless you create an account, now
+          can we?
+
+        a(href='/register')
+          button.btn.btn-lg.btn-default.get-started Get Started Now
