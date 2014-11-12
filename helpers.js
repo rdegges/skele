@@ -42,6 +42,12 @@ module.exports.initMiddleware = function(app) {
     application:    process.env.STORMPATH_URL,
     secretKey:      process.env.STORMPATH_SECRET_KEY,
   }));
+
+  // In development mode, serve static assets.
+  if (app.get('env') === 'development') {
+    console.log('hi', __dirname + '/assets');
+    app.use('/assets', express.static(__dirname + '/assets'));
+  }
 };
 
 /**
