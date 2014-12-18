@@ -9,7 +9,7 @@ var stormpath = require('express-stormpath');
 
 var helpers = require('./helpers');
 var publicRoutes = require('./routes/public');
-//var dashboardRoutes = require('./routes/dashboard');
+var privateRoutes = require('./routes/private');
 
 // Initialize our MongoDB connection.
 helpers.connectDB(process.env.MONGOLAB_URI);
