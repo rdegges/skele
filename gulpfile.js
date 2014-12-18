@@ -1,3 +1,7 @@
+/**
+ * Development tasks.
+ */
+
 var bower = require('gulp-bower');
 var del = require('del');
 var gulp = require('gulp');
