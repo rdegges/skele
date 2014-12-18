@@ -41,6 +41,7 @@ module.exports.initMiddleware = function(app) {
   app.use(stormpath.init(app, {
     application:    process.env.STORMPATH_URL,
     secretKey:      process.env.STORMPATH_SECRET_KEY,
+    redirectUrl:    '/dashboard',
   }));
 
   // In development mode, serve static assets.
