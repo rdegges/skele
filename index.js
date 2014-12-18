@@ -6,7 +6,7 @@ var publicRoutes = require('./routes/public');
 //var dashboardRoutes = require('./routes/dashboard');
 
 // Initialize our MongoDB connection.
-helpers.connectDB(process.env.MONGOHQ_URL);
+helpers.connectDB(process.env.MONGOLAB_URI);
 
 // Initialize routes.
 var router = express.Router();
