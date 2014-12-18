@@ -15,7 +15,7 @@ router.use(stormpath.loginRequired);
 /**
  * The dashboard page.
  */
-router.get('/dashboard', function(req, res) {
+router.get('/', function(req, res) {
   res.send('You are logged in!');
 });
 
