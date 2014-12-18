@@ -1,3 +1,9 @@
+'use strict';
+
+/**
+ * The entry point into our web app.
+ */
+
 var express = require('express');
 var stormpath = require('express-stormpath');
 
