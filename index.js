@@ -17,7 +17,7 @@ helpers.connectDB(process.env.MONGOLAB_URI);
 // Initialize routes.
 var router = express.Router();
 router.use('/', publicRoutes);
-//router.use('/dashboard', dashboardRoutes);
+router.use('/dashboard', privateRoutes);
 
 // Initialize our Express application.
 var app = helpers.createApp();
