@@ -26,7 +26,7 @@
   "dependencies": {
     "bower": "^1.3.12",
     "express": "^4.10.6",
-    "express-stormpath": "^0.5.9",
+    "express-stormpath": "^0.6.9",
     "jade": "^1.8.2",
     "mongoose": "^3.8.21",
     "stylus": "^0.49.3",
