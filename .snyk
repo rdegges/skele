@@ -12,3 +12,13 @@ patch:
         patched: '2022-02-06T05:37:50.539Z'
     - express-stormpath > stormpath > request > hawk > cryptiles > boom > hoek:
         patched: '2022-02-06T05:37:50.539Z'
+  'npm:mime:20170907':
+    - express-stormpath > stormpath > request > form-data > mime:
+        patched: '2022-02-06T05:39:28.718Z'
+  'npm:minimatch:20160620':
+    - gulp > vinyl-fs > glob-stream > minimatch:
+        patched: '2022-02-06T05:39:28.718Z'
+    - gulp > vinyl-fs > glob-watcher > gaze > globule > minimatch:
+        patched: '2022-02-06T05:39:28.718Z'
+    - gulp > vinyl-fs > glob-watcher > gaze > globule > glob > minimatch:
+        patched: '2022-02-06T05:39:28.718Z'
