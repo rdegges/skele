@@ -1,5 +1,5 @@
 # Snyk (https://snyk.io) policy file, patches or ignores known vulnerabilities.
-version: v1.22.1
+version: v1.25.0
 ignore: {}
 # patches apply the minimum changes required to fix a vulnerability
 patch:
@@ -22,3 +22,14 @@ patch:
         patched: '2022-02-06T05:39:28.718Z'
     - gulp > vinyl-fs > glob-watcher > gaze > globule > glob > minimatch:
         patched: '2022-02-06T05:39:28.718Z'
+  'npm:debug:20170905':
+    - gulp-livereload > mini-lr > body-parser > debug:
+        patched: '2022-06-22T07:37:11.893Z'
+  'npm:ms:20170412':
+    - gulp-livereload > mini-lr > body-parser > debug > ms:
+        patched: '2022-06-22T07:37:11.893Z'
+  'npm:uglify-js:20151024':
+    - jade > transformers > uglify-js:
+        patched: '2022-06-22T07:37:11.893Z'
+    - express-stormpath > jade > transformers > uglify-js:
+        patched: '2022-06-22T07:37:11.893Z'
